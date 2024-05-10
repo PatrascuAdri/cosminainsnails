@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Dancing+Script:wght@400..700&family=League+Script&family=Poppins:wght@500;600&display=swap');
+
+/* Reset style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* General style */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: rgb(53, 50, 50);
+    line-height: 1.4;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: white;
+    background-color:rgb(53, 50, 50);
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: all .5s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: rgb(53, 50, 50);
+    background-color: white;
+}
+
+section:not(.hero) {
+    padding: 6rem 0;
+}
+
+section > .section-title {
+    text-align: center;
+    color: rgb(206, 147, 182);
+    font-size: 4rem;
+    margin-bottom: .5rem;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+section > .section-subtitle {
+    text-align: center;
+    color: rgb(53, 50, 50);
+    margin-bottom: 3rem; 
+}
+
+/* Header style */
+header {
+    color:white;
+    background-color:rgb(53, 50, 50);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+header .logo a {
+    font-family: "Codystar", sans-serif;
+    text-decoration: none;
+    color:rgb(206, 147, 182);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .btn-toggle {
+    background: transparent;
+    color:white;
+    border: solid 2px white;;
+    border-radius: 5px;
+    padding: .5rem;
+}
+header .navigation {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    display: none;
+}
+
+header .navigation.active {
+    display: block;
+}
+
+header .nav-items {
+    list-style: none;
+}
+
+.nav-items .nav-link {
+    text-decoration: none;
+    color:white;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.nav-items .nav-link:hover {
+    background-color:rgb(211, 177, 182) ;
+    padding-left: .5rem;
+
+}
+
+/*Hero style */
+
+.hero {
+    height: 90vh;
+    background: url(./imagini/6d46626c-b515-4113-a9a4-3f63c5a3ba00.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    color: white;
+    background: rgba(53, 50, 50, 0.179);
+    position:absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    text-wrap: balance;
+}
+
+.hero-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-family: "League Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-content p {
+    margin-bottom: 2rem;
+}
+
+/* Services style */
+
+.services > .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem;
+    transition: box-shadow .5s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 30px rgba(206, 127, 174, 0.663);
+}
+
+.service-card .service-title {
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+}
+
+/* Porotolio style */ 
+
+.portofolio {
+    background-color: white;
+}
+
+.portofolio > .section-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    color: rgb(53, 50, 50);
+    line-height: 1.4;
+    text-align: center;
+    padding: 3rem ;
+    background-color: white;
+    border-radius: 5px;
+    transition: box-shadow .5s ease;
+}    
+.portofolio .section-subtitle:hover {
+    box-shadow: 0 10px 30px rgba(206, 127, 174, 0.663);
+}
+
+
+.portofolio > .container {
+    display: inline-flex;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    justify-items: middle;
+}
+
+.portofolio-card {
+    background-color: rgba(255, 255, 255, 0);
+    max-width: 500px;
+}
+
+.portofolio-card .portofolio-link {
+    display: block;
+    position: relative;
+    height: 500px;
+}
+
+.portofolio-card .portofolio-overlay {
+    font-weight: lighter;
+    color: rgba(255, 248, 248, 0.682);
+    background-color: hsla(319, 12%, 53%, 0);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.portofolio-card .portofolio-overlay span {
+    border: solid 3px white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.portofolio-card .portofolio-link img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    padding: 1rem;
+    background-color: rgba(255, 192, 203, 0.041);
+    place-content: center;
+}
+
+.portofolio-card .portofolio-link:hover .portofolio-overlay {
+    opacity: 1;
+}
+
+/* About me style */
+.member .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.member {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+}
+
+.member img {
+    max-width: 350px;
+    border-radius: 5%;
+    border: solid 3px white;
+
+}
+
+.member p {
+    color: rgb(53, 50, 50);
+    text-align: center ;
+    font-size: 1.2rem;
+    padding: 4rem;
+}
+
+.member .member-socials {
+    list-style: none;
+    display: flex;
+    gap: .5rem;   
+}
+
+.member .member-socials a {
+    text-decoration: none;
+    color: white;
+    background-color:rgb(53, 50, 50);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .5s ease;
+    
+}
+
+.member .member-socials a:hover {
+    color:rgb(53, 50, 50);
+    background-color: white;
+}
+
+/* Contact style */
+.contact {
+    background-color: white;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.contact-form .form-message {
+    grid-column: 1 / span 2;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: sans-serif;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+}
+
+.contact-form .btn-primary {
+    grid-column: 1 / span 2 ;
+}
+
+/* Footer style */
+footer {
+    color: white;
+    background-color: rgb(53, 50, 50);
+    padding: 1.25rem 0;
+}
+
+footer > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+footer .social-items {
+    list-style: none;
+    display: flex;
+    gap: .75rem;
+}
+
+footer .social-items .social-link {
+    text-decoration: none;
+    color: white;
+}
+/* Media Query style */
+@media screen and (min-width: 768px) {
+      /* General style */
+      .btn-primary {
+        font-size: 1rem;
+        padding: 1rem 3rem;
+      }
+
+      /* Header style */
+      header .btn-toggle {
+        display: none;
+      }
+
+      header .navigation {
+        display: flex;
+        flex-basis: auto;
+        margin: 0;
+      }
+
+      header .nav-items {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .nav-items .nav-link {
+        padding: .5rem;
+      }
+        /* Hero style */
+      .hero-content {
+        max-width:  700px;
+      }
+      
+      .hero-content h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.125rem;
+      }
+
+    /* Contact style */
+    .contact-form .btn-primary {
+        width: auto;
+        justify-self: center;
+    }
+
+    /* Footer style */
+    footer > .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
