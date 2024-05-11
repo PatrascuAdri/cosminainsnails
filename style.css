@@ -419,3 +419,11 @@ footer .social-items .social-link {
         justify-content: space-between;
     }
 }
+
+#main_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+}
